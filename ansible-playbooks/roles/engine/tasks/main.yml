@@ -34,7 +34,7 @@
   when: install_masscan_on_engine
 
 - name: Copy masscan binary to /usr/bin
-  command: cp "{{ engine_dir }}/masscan/bin/masscan" /usr/bin/masscan
+  command: cp "{{ engine_dir }}/masscan/bin/masscan" /usr/local/bin/masscan
   when: (masscan_stat.stat.exists == True) and
         (install_masscan_on_engine == True)
 
